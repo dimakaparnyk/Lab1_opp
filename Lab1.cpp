@@ -10,14 +10,15 @@ int main() {
         return 1;
     }
 
-    Price total = { 0, 0 }; 
-    Price temp = { 0, 0 };  
+    Price total = { 0, 0 };
+    Price temp = { 0, 0 };
     int h, k, q;
 
     while (inputFile >> h >> k >> q) {
-        Price item = { h, static_cast<short>(k) }; 
-        mult(temp, item, q);
-        sum(total, total, temp);
+        temp.hrn = h;
+        temp.kop = static_cast<short>(k);
+        mult(total, temp, q);  // множимо на кількість
+        sum(total, temp);      // додаємо до загальної суми
     }
 
     inputFile.close();
@@ -25,7 +26,7 @@ int main() {
     cout << "Total amount: ";
     print(total);
 
-    roundTo10(total);
+    roundTo10(total);  // заокруглення
     cout << "The amount to be paid: ";
     print(total);
 

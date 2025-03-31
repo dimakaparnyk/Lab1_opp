@@ -8,10 +8,9 @@ struct Price {
     short kop;
 };
 
-void sum(Price& result, const Price& a, const Price& b);
-void mult(Price& result, const Price& a, int quantity);
+void sum(Price& a, const Price& b);
+void mult(Price& a, const Price& b, int quantity);
 void roundTo10(Price& p);
 void print(const Price& p);
 
-#endif 
-#pragma once
+#endif
