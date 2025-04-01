@@ -17,8 +17,8 @@ int main() {
     while (inputFile >> h >> k >> q) {
         temp.hrn = h;
         temp.kop = static_cast<short>(k);
-        mult(total, temp, q);  // множимо на кількість
-        sum(total, temp);      // додаємо до загальної суми
+        mult(temp, temp, q);  // Множимо temp на кількість q
+        sum(total, temp);     // Додаємо до загальної суми total
     }
 
     inputFile.close();
