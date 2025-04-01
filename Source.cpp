@@ -1,7 +1,7 @@
 ﻿#include "Header1.h"
 using namespace std;
 
-void sum(Price& a, const Price& b) {
+void sum(Price& a, Price& b) {
     a.hrn += b.hrn;
     a.kop += b.kop;
 
@@ -11,7 +11,7 @@ void sum(Price& a, const Price& b) {
     }
 }
 
-void mult(Price& a, const Price& b, int quantity) {
+void mult(Price& a, Price& b, int quantity) {
     int totalKop = (b.hrn * 100 + b.kop) * quantity;
     a.hrn = totalKop / 100;
     a.kop = totalKop % 100;
@@ -28,6 +28,6 @@ void roundTo10(Price& p) {
     }
 }
 
-void print(const Price& p) {
+void print(Price& p) {
     cout << p.hrn << " uah " << p.kop << " cent." << endl;
 }

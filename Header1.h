@@ -5,12 +5,12 @@
 
 struct Price {
     int hrn;
-    short kop;
+    short int kop;
 };
 
-void sum(Price& a, const Price& b);
-void mult(Price& a, const Price& b, int quantity);
+void sum(Price& a, Price& b);
+void mult(Price& a, Price& b, int quantity);
 void roundTo10(Price& p);
-void print(const Price& p);
+void print(Price& p);
 
 #endif
